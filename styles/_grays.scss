@@ -1,0 +1,8 @@
+@each $name, $value in $grays {
+    .text-gray-#{$name} {
+      color: $value;
+    }
+    .bg-gray-#{$name} {
+      background-color: $value;
+    }
+  }

@@ -1,0 +1,62 @@
+$display1-size: 3.125rem; // tagline title
+$display1-weight: 400;
+$display1-line-height: 1.1;
+
+$display2-size: 3.125rem; // section title
+$display2-weight: 300;
+$display2-line-height: 1.5;
+
+$display3-size: 1.75rem; // tagline sub-title
+$display3-weight: 300;
+$display3-line-height: 1.357;
+
+$display4-size: 1.5rem; // service title, person name
+$display4-weight: 400;
+$display4-line-height: 1.1;
+
+$display5-size: 1.5rem; // section sub-title
+$display5-weight: 300;
+$display5-line-height: 1.416;
+
+$display6-size: 1.25rem; // person work, person text
+$display6-weight: 300;
+$display6-line-height: 1.5;
+
+// Type display classes
+.display-1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+  line-height: $display1-line-height;
+}
+
+.display-2 {
+  font-size: $display2-size;
+  font-weight: $display2-weight;
+  line-height: $display2-line-height;
+}
+
+.display-3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+  line-height: $display3-line-height;
+}
+
+.display-4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+  line-height: $display4-line-height;
+}
+
+.display-5 {
+  font-size: $display5-size;
+  font-weight: $display5-weight;
+  line-height: $display5-line-height;
+}
+
+.display-6 {
+  font-size: $display6-size;
+  font-weight: $display6-weight;
+  line-height: $display6-line-height;
+}
+
+

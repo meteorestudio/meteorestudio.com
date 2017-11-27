@@ -1,0 +1,61 @@
+// Block
+
+$block-spacer-x: 1.875rem;
+$block-spacer-y: 3.75rem;
+
+$block-color: black;
+$block-bg: white;
+
+$block-overlay-bg: rgba($primary, 0.3);
+
+.block {
+  position: relative;
+  width: 100%;
+  color: $block-color;
+  padding: $block-spacer-y $block-spacer-x;
+  background-color: $block-bg;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.block-fill-height {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.block-top,
+.block-middle,
+.block-bottom {
+  width: 100%;
+} 
+
+.block-middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block-bottom {
+  margin-top: auto;
+}
+
+.block-overlay:before {  
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $block-overlay-bg;
+}
+
+$block-color-inverted: white;
+$block-bg-inverted: black;
+
+.block-inverse {
+  //color: $block-color-inverted;
+  //background-color: $block-bg-inverted;
+}

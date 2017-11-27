@@ -1,0 +1,29 @@
+.square-body {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.square {
+  position: relative;
+}
+
+.square {
+  padding-bottom: 100%;
+}
+
+@include media-breakpoint-up(md) {
+  .square-md {
+    padding-bottom: 50%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .square-xl {
+    padding-bottom: 33.333%;
+  }
+}
+  
+

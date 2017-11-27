@@ -1,0 +1,22 @@
+{
+  "name": "meteorestudio.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "modularscale-sass": "^3.0.3",
+    "popper.js": "^1.12.7"
+  }
+}

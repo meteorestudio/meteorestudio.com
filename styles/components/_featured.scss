@@ -1,0 +1,85 @@
+// TODO:
+// color and bg color
+// transparent version
+// inverse version
+$featured-spacer-x: .75rem; 
+$featured-spacer-y: map-get($spacers, 4); 
+
+$featured-divider-color: $gray-200;
+$featured-divider-width: 40px;
+$featured-divider-thick: 1px;
+$featured-divider-style: solid;
+
+.featured {
+  display: flex;
+  position: relative;
+}
+
+.featured-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  // padding: $featured-spacer-y $featured-spacer-x;
+}
+
+.featured-text:last-child {
+  margin-bottom: 0;
+}
+
+.featured-divider {
+  width: $featured-divider-width;
+  border: $featured-divider-thick $featured-divider-style $featured-divider-color;
+  margin-bottom: map-get($spacers, 3);
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .featured#{$infix}-center {
+      flex-direction: column;
+      text-align: center;
+    
+      > .featured-media {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $featured-spacer-y;
+        //margin-top: $featured-spacer-y;
+        order: unset;
+      }
+
+      > .featured-body > .featured-title {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $featured-spacer-y;
+      }
+    }
+    
+    .featured#{$infix}-left {
+      flex-direction: row;
+      text-align: left;
+    
+      > .featured-media {
+        margin-right: $featured-spacer-y;
+        order: unset;
+      }
+    }
+
+    .featured#{$infix}-media {
+      flex-direction: row;
+      text-align: right;
+    
+      > .featured-icon {
+        margin-left: $featured-spacer-y;
+        order: 2;
+      }
+    }
+
+  }
+}
+
+$featured-dark-color: rgba($white,.5);
+
+.featured-dark {
+  color: $featured-dark-color;
+}

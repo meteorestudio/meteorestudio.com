@@ -1,0 +1,37 @@
+// Block
+$block-color: black;
+$block-bg: white;
+$block-spacer-x: 30px;
+$block-spacer-y: 60px;
+
+$block-overlay-bg: rgba($black, .8);
+
+// Feature
+$feature-color: $black;
+
+// Feature - transparent
+$feature-transparent-color:#fff;
+$feature-transparent-bg: transparent;
+
+// Card - profile
+$card-profile-border-radius-inner: 50% !default;
+
+// Navbar - transparent
+/*
+$navbar-transparent-color:               #fff;
+$navbar-transparent-bg:                  transparent;
+$navbar-transparent-border:              transparent;
+$navbar-transparent-link-color:          $navbar-transparent-color;
+$navbar-transparent-link-hover-color:    darken($navbar-transparent-color, 10%);
+$navbar-transparent-link-hover-bg:       transparent;
+$navbar-transparent-link-active-color:   $navbar-transparent-link-hover-color;
+$navbar-transparent-link-active-bg:      transparent;
+$navbar-transparent-link-disabled-color: lighten($navbar-transparent-color, 10%);
+$navbar-transparent-link-disabled-bg:    transparent;
+$navbar-transparent-brand-color:         $navbar-transparent-color;
+$navbar-transparent-brand-hover-color:   darken($navbar-transparent-color, 10%);
+$navbar-transparent-brand-hover-bg:      transparent;
+$navbar-transparent-toggle-hover-bg:     fade($navbar-transparent-color, 10%);
+$navbar-transparent-toggle-icon-bar-bg:  $navbar-transparent-color;
+$navbar-transparent-toggle-border-color: $navbar-transparent-color;
+*/

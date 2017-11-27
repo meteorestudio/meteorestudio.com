@@ -1,0 +1,24 @@
+// Card Profile
+.card-profile-img {
+  @include border-radius($card-profile-border-radius-inner);
+  border-width: 5px;
+  border: $card-border-width solid $card-border-color;
+}
+.card-profile-img-top {
+  position: relative;
+  margin-top: 30px;
+}
+
+.card-profile-img-left {
+  margin-left: $card-spacer-x;
+}
+
+.card-profile-img-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-profile-img-right {
+  margin-left: auto;
+  margin-right: $card-spacer-x;
+}

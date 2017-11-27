@@ -1,0 +1,17 @@
+<section class="container-fluid">
+  <ul class="row list-unstyled no-gutters list-bordered list-md-bordered-col-2 list-xl-bordered-col-3 mb-0 py-md-5">
+    <% services.forEach(function(service) { %>
+    <li class="col-12 col-md-6 col-xl-4">  
+      <div class="featured featured-center col-sm-6 col-xl-8 mx-auto py-5 py-xl-10">
+        <img src="assets/<%= service.image %>" height="50px" width="50px" class="featured-media" />
+        <div class="featured-body">
+          <h5 class="featured-title text-variant-1"><%= service.name %></h5>
+          <hr class="featured-divider">
+          <p class="featured-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu fermentum odio. Nunc vel euismod mi.</p>
+          
+        </div>
+      </div>
+    </li>
+    <% }); %>
+  </ul>
+</section>

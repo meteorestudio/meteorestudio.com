@@ -1,0 +1,61 @@
+$list-bordered-border-width: 1px;
+$list-bordered-border-style: solid;
+$list-bordered-border-color: $gray-200;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      
+      // stacked col 1
+      .list#{$infix}-bordered > li:not(:last-child)  {
+        border-bottom: $list-bordered-border-width $list-bordered-border-style $list-bordered-border-color;
+      }
+
+      // stacked col 2
+      // bottom
+      .list#{$infix}-bordered-col-2 > li:not(:nth-last-child(-n+2))  {
+        border-bottom: $list-bordered-border-width $list-bordered-border-style $list-bordered-border-color;
+      }
+
+      .list#{$infix}-bordered-col-2 > li:nth-last-child(-n+2) {
+          border-bottom: none;
+      }
+      // right
+      .list#{$infix}-bordered-col-2 > li:nth-child(2n+1)  {
+        border-right: $list-bordered-border-width $list-bordered-border-style $list-bordered-border-color;
+      }
+
+      .list#{$infix}-bordered-col-2 > li:not(:nth-child(2n+1)) {
+          border-right: none;
+      }
+
+      // stacked col 3
+      // bottom
+      .list#{$infix}-bordered-col-3 > li:not(:nth-last-child(-n+3))  {
+        border-bottom: $list-bordered-border-width $list-bordered-border-style $list-bordered-border-color;
+      }
+
+      .list#{$infix}-bordered-col-3 > li:nth-last-child(-n+3) {
+        border-bottom: none;
+      }
+      // right
+      .list#{$infix}-bordered-col-3 > li:nth-child(3n+1)  {
+        border-right: $list-bordered-border-width $list-bordered-border-style $list-bordered-border-color;
+      }
+
+      .list#{$infix}-bordered-col-3 > li:nth-child(3n+2)  {
+        border-right: $list-bordered-border-width $list-bordered-border-style $list-bordered-border-color;
+      }
+
+      .list#{$infix}-bordered-col-3 > li:nth-child(3n) {
+        border-right: none;   
+      }
+
+  
+
+      //.list#{$infix}-bordered-col-3 > li:nth-child(2n+1)  {
+      //  border-right: none;
+      //}
+
+    }
+  }

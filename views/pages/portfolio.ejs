@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="bg-primary">
+  <% include ../components/navbar %>
+  <div class="container">
+    <div class="row">
+    <h1 class="col-12 col-sm-10 col-md-8 col-lg-5 mx-auto py-7 d-flex flex-column text-variant-2 text-white align-items-center">
+        <span class="align-self-sm-start">Para</span>
+        <span class="">Sentirse</span>
+        <span class="align-self-sm-end">Orgulloso.</span>
+    </h1>
+    </div>
+    </div>
+
+<!--
+<div class="grid-item col-xs-6 col-sm-8 col-md-6">
+<div class="grid-item col-xs-6 col-sm-4 col-md-3">
+-->
+
+  <div class="container-fluid p-0">
+    <div class="grid">
+      <div class="grid-sizer col-xs-6 col-sm-4 col-md-3"></div>
+        <% portfolio.forEach(function(portfolioItem) { %>
+          <% if(portfolioItem.importance === 0) { %>
+            <div class="grid-item col-xs-6 col-sm-4 col-md-3">
+          <% } else { %>
+            <div class="grid-item col-xs-6 col-sm-8 col-md-6">
+          <% } %>
+              <figure>
+                <img src="assets/<%= portfolioItem.image %>" class="img-fluid" />
+                <figcaption>
+                  <div class="figcaption-content text-center px-5">
+                    <h5><%= portfolioItem.title %></h5>
+                      <ul class="list-inline text-center">
+                      <% portfolioItem.services.forEach(function(portfolioItemService) {%>
+                        <li class="list-inline-item text-uppercase small"><%= portfolioItemService %></li>
+                      <% }); %>
+                      </ul>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+        <% }); %>
+    </div>
+  </div>
+
+  <% include ../partials/footer %>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script>
+  // init Masonry
+  var $grid = $('.grid').masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    columnWidth: '.grid-sizer'
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry();
+  });  
+  </script>
+</body>
+</html>
